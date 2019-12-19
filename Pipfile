@@ -1,0 +1,18 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+case-style-changer = {editable = true,path = "."}
+flake8 = "*"
+pytest = "*"
+pytest-watch = "*"
+pytest-cov = "*"
+pytest-mock = "*"
+yapf = "*"
+
+[packages]
+
+[requires]
+python_version = "3.8"
