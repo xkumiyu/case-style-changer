@@ -1,4 +1,5 @@
-from case_style_changer.cli import CaseGuesser, camel_case, change_case, split_text
+from case_style_changer.cli import (CaseGuesser, camel_case, change_case,
+                                    split_text)
 
 
 def test_camel_case():
