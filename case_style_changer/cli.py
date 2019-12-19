@@ -1,6 +1,10 @@
 import argparse
 
 
+class CSCArgumentParser(argparse.ArgumentParser):
+    pass
+
+
 def main():
-    parser = argparse.ArgumentParser(description='Change case style.')
+    parser = CSCArgumentParser(description='Change case style.')
     parser.parse_args()

@@ -1,5 +1,5 @@
-from case_style_changer import cli
+from case_style_changer.cli import CSCArgumentParser
 
 
-def test_main():
-    cli.main()
+def test_parser():
+    CSCArgumentParser()
