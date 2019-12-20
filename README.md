@@ -16,8 +16,8 @@ caseStyleChanger
 ```
 
 ``` sh
-$ csc camel_case --text "case style changer"
-caseStyleChanger
+$ csc snake_case --text "case style changer"
+case_style_changer
 ```
 
 ### Available case style
@@ -25,3 +25,7 @@ caseStyleChanger
 | Case Name | Example |
 |:--:|:--:|
 | `camel_case` | caseStyleChanger |
+| `pascal_case` | CaseStyleChanger |
+| `snake_case` | case_style_changer |
+| `constant_case` | CASE_STYLE_CHANGER |
+| `kebab_case` | case-style-changer |
