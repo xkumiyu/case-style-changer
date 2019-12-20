@@ -16,7 +16,7 @@ caseStyleChanger
 ```
 
 ``` sh
-$ csc snake_case --text "case style changer"
+$ csc snake_case --text "case-style-changer"
 case_style_changer
 ```
 

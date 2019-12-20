@@ -12,7 +12,7 @@ class Case(object):
         elif case_name == 'kebab_case':
             return KebabCase
         else:
-            raise
+            raise Exception('invalid case name')
 
     @staticmethod
     def available_list():
@@ -23,14 +23,22 @@ class Case(object):
 
 
 class SpaceSeparated(object):
-    """ space separated
-    Example:
-        case style changer
-    """
     pass
 
 
-class CapitalCase(object):
+class UnderscoreSeparated(object):
+    pass
+
+
+class HyphenSeparated(object):
+    pass
+
+
+class UppercaseSeparated(object):
+    pass
+
+
+class CapitalCase(SpaceSeparated):
     """ capital case
     Example:
         Case style changer
@@ -38,7 +46,7 @@ class CapitalCase(object):
     pass
 
 
-class CamelCase(object):
+class CamelCase(UppercaseSeparated):
     """ camel case
     Example:
         caseStyleChanger
@@ -46,28 +54,28 @@ class CamelCase(object):
     pass
 
 
-class PascalCase(object):
+class PascalCase(UppercaseSeparated):
     """ pascal case
     Example:
         CaseStyleChanger
     """
 
 
-class SnakeCase(object):
+class SnakeCase(UnderscoreSeparated):
     """ snake case
     Example:
         case_style_changer
     """
 
 
-class ConstantCase(object):
+class ConstantCase(UnderscoreSeparated):
     """ constant case
     Example:
         CASE_STYLE_CHANGER
     """
 
 
-class KebabCase(object):
+class KebabCase(HyphenSeparated):
     """ kebab case
     Example:
         case-style-changer
