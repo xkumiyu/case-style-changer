@@ -1,45 +1,41 @@
 import argparse
+import sys
 
-
-class CaseGuesser(object):
-    def guess(self, text):
-        if self.is_space_separated(text):
-            return 'space_separated'
-        else:
-            raise Exception('Invalid case')
-
-    def is_space_separated(self, text):
-        return ' ' in text
-
-
-def split_text(text, case):
-    """ split text into words
-    """
-
-    if case == 'space_separated':
-        return text.split(' ')
-    else:
-        raise
-
-
-def camel_case(words):
-    """ convert text to camel case
-    """
-    words = [words[0].lower()] + [word.capitalize() for word in words[1:]]
-    return ''.join(words)
-
-
-def change_case(text):
-    guesser = CaseGuesser()
-    case = guesser.guess(text)
-
-    words = split_text(text, case)
-    return camel_case(words)
+from .case_changer import CaseChanger
+from .case_guesser import CaseGuesser
+from .text_splitter import TextSplitter
+from .case_style import Case
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Change case style.')
-    parser.add_argument('text')
-    args = parser.parse_args()
+    args = parse_args(sys.argv[1:])
+    print(change_case_style(args.text, args.case))
 
-    print(change_case(args.text))
+
+def parse_args(args):
+    parser = argparse.ArgumentParser(description='Change case style.')
+    parser.add_argument('case', choices=Case.available_list())
+    parser.add_argument('--text')
+    return parser.parse_args(args)
+
+
+def change_case_style(text, case):
+    in_text = get_text(text)
+    out_case = Case.from_string(case)
+
+    guesser = CaseGuesser()
+    in_case = guesser.guess(in_text)
+
+    splitter = TextSplitter(in_case)
+    words = splitter.split(in_text)
+
+    changer = CaseChanger(out_case)
+    out_text = changer.change(words)
+
+    return out_text
+
+
+def get_text(text):
+    if text is None:
+        text = input().strip()
+    return text

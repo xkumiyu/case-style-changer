@@ -1,32 +1,25 @@
-from case_style_changer.cli import (CaseGuesser, camel_case, change_case,
-                                    split_text)
+import pytest
+
+from case_style_changer.cli import parse_args, change_case_style
 
 
-def test_camel_case():
-    words = ['case', 'style', 'changer']
-    text = camel_case(words)
+@pytest.mark.parametrize('args, expected',
+                         [(['camel_case'], {
+                             'case': 'camel_case',
+                             'text': None
+                         }),
+                          (['camel_case', '--text', 'case style changer'], {
+                              'case': 'camel_case',
+                              'text': 'case style changer'
+                          })])
+def test_parser(args, expected):
+    parser = parse_args(args)
 
-    assert text == 'caseStyleChanger'
-
-
-def test_split_text():
-    text = 'case style changer'
-    case = 'space_separated'
-    words = split_text(text, case)
-
-    assert words == ['case', 'style', 'changer']
-
-
-def test_guess():
-    text = 'case style changer'
-    guesser = CaseGuesser()
-    case = guesser.guess(text)
-
-    assert case == 'space_separated'
+    assert parser.case == expected['case']
+    assert parser.text == expected['text']
 
 
-def test_change_case():
-    text = 'case style changer'
-    changed_text = change_case(text)
+def test_change_case_style():
+    result = change_case_style('case style changer', 'camel_case')
 
-    assert changed_text == 'caseStyleChanger'
+    assert result == 'caseStyleChanger'
