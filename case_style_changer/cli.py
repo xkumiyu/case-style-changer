@@ -9,19 +9,19 @@ from .case_style import Case
 
 def main():
     args = parse_args(sys.argv[1:])
-    print(change_case_style(args.text, args.case))
+    print(change_case_style(args.text, args.case_name))
 
 
 def parse_args(args):
     parser = argparse.ArgumentParser(description='Change case style.')
-    parser.add_argument('case', choices=Case.available_list())
+    parser.add_argument('case_name', choices=Case.available_list())
     parser.add_argument('--text')
     return parser.parse_args(args)
 
 
-def change_case_style(text, case):
+def change_case_style(text, case_name):
     in_text = get_text(text)
-    out_case = Case.from_string(case)
+    out_case = Case.from_string(case_name)
 
     guesser = CaseGuesser()
     in_case = guesser.guess(in_text)
