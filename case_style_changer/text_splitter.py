@@ -34,6 +34,6 @@ class TextSplitter(object):
         for first_word, remaining_word in zip(first_words, remaining_words):
             word = first_word + remaining_word
             if word != '':
-                words.append(word)
+                words.append(word.lower())
 
         return words

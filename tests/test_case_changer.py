@@ -1,17 +1,23 @@
 import pytest
 
 from case_style_changer.case_changer import CaseChanger
-from case_style_changer.case_style import CamelCase
+from case_style_changer.case_style import (CamelCase, ConstantCase, KebabCase,
+                                           PascalCase, SnakeCase)
 
 
-def test_camel_case():
+@pytest.mark.parametrize('case, expected',
+                         [(CamelCase, 'caseStyleChanger'),
+                          (PascalCase, 'CaseStyleChanger'),
+                          (SnakeCase, 'case_style_changer'),
+                          (ConstantCase, 'CASE_STYLE_CHANGER'),
+                          (KebabCase, 'case-style-changer')])
+def test_case_changer(case, expected):
     words = ['case', 'style', 'changer']
-    case = CamelCase
 
     changer = CaseChanger(case)
     text = changer.change(words)
 
-    assert text == 'caseStyleChanger'
+    assert text == expected
 
 
 def test_case_error():
