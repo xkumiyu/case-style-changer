@@ -11,6 +11,8 @@ pytest-watch = "*"
 pytest-cov = "*"
 pytest-mock = "*"
 yapf = "*"
+wheel = "*"
+twine = "*"
 
 [packages]
 

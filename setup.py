@@ -6,4 +6,5 @@ setup(name='case-style-changer',
       author_email='xkumiyu@gmail.com',
       url='https://github.com/xkumiyu/case-changer',
       entry_points={'console_scripts': ['csc = case_style_changer.cli:main']},
-      packages=find_packages(exclude=('tests', 'docs')))
+      packages=find_packages(exclude=('tests', 'docs')),
+      setup_requires=['wheel'])
