@@ -13,10 +13,10 @@ from case_style_changer.cli import parse_args, change_case_style
                               'text': 'case style changer'
                           })])
 def test_parser(args, expected):
-    parser = parse_args(args)
+    args = parse_args(args)
 
-    assert parser.case_name == expected['case_name']
-    assert parser.text == expected['text']
+    assert args.case_name == expected['case_name']
+    assert args.text == expected['text']
 
 
 def test_change_case_style():

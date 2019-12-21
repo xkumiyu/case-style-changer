@@ -3,8 +3,8 @@ import sys
 
 from .case_changer import CaseChanger
 from .case_guesser import CaseGuesser
-from .text_splitter import TextSplitter
 from .case_style import Case
+from .text_splitter import TextSplitter
 
 
 def main():
