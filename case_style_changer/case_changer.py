@@ -4,17 +4,16 @@ from .case_style import (CamelCase, ConstantCase, KebabCase, PascalCase,
 
 class CaseChanger(object):
     def __init__(self, case):
-        if case == CamelCase:
-            self.change = self.camel_case
-        elif case == PascalCase:
-            self.change = self.pascal_case
-        elif case == SnakeCase:
-            self.change = self.snake_case
-        elif case == ConstantCase:
-            self.change = self.constant_case
-        elif case == KebabCase:
-            self.change = self.kebab_case
-        else:
+        to_change = {
+            CamelCase: self.camel_case,
+            PascalCase: self.pascal_case,
+            SnakeCase: self.snake_case,
+            ConstantCase: self.constant_case,
+            KebabCase: self.kebab_case
+        }
+        try:
+            self.change = to_change[case]
+        except KeyError:
             raise Exception('invalid case')
 
     def camel_case(self, words):

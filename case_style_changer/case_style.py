@@ -1,17 +1,15 @@
 class Case(object):
     @staticmethod
     def from_string(case_name):
-        if case_name in CamelCase.flags():
-            return CamelCase
-        elif case_name in PascalCase.flags():
-            return PascalCase
-        elif case_name in SnakeCase.flags():
-            return SnakeCase
-        elif case_name in ConstantCase.flags():
-            return ConstantCase
-        elif case_name in KebabCase.flags():
-            return KebabCase
-        else:
+        cases = [CamelCase, PascalCase, SnakeCase, ConstantCase, KebabCase]
+
+        to_case = {}
+        for case in cases:
+            to_case.update({flag: case for flag in case.flags()})
+
+        try:
+            return to_case[case_name]
+        except KeyError:
             raise Exception('invalid case name')
 
     @staticmethod
