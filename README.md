@@ -23,21 +23,21 @@ $ csc [--text TEXT] CASE_NAME
 You can use standard input or arguments.
 
 ``` sh
-$ echo "case-style-changer" | csc camel_case
+$ echo "case-style-changer" | csc camel
 caseStyleChanger
 ```
 
 ``` sh
-$ csc snake_case --text "caseStyleChanger"
+$ csc snake --text "caseStyleChanger"
 case_style_changer
 ```
 
 ### Available case style
 
-| Case Name | Example |
-|:--:|:--:|
-| `camel_case` | caseStyleChanger |
-| `pascal_case` | CaseStyleChanger |
-| `snake_case` | case_style_changer |
-| `constant_case` | CASE_STYLE_CHANGER |
-| `kebab_case` | case-style-changer |
+| Case Name | `CASE_NAME` | Example |
+|:--|:--|:--|
+| Camel Case | `camel`, `camel_case`, `lower_camel_case`, `lcc` | caseStyleChanger |
+| Pascal Case | `pascal`, `pascal_case`, `upper_camel_case`, `ucc` | CaseStyleChanger |
+| Snake Case | `snake`, `snake_case`, `lower_snake_case`, `lsc` | case_style_changer |
+| Constant Case | `constant`, `constant_case`, `screaming`, `screaming_snake_case`, `upper_snake_case`, `upper_case`, `usc`, `ssc` | CASE_STYLE_CHANGER |
+| Kebab Case | `kebab`, `kebab_case`, `chain`, `chain_case` | case-style-changer |
