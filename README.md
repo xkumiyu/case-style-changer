@@ -43,6 +43,8 @@ case_style_changer
 | Snake Case | `snake`, `snake_case`, `lower_snake_case`, `lsc` | case_style_changer |
 | Constant Case | `constant`, `constant_case`, `screaming`, `screaming_snake_case`, `upper_snake_case`, `upper_case`, `usc`, `ssc` | CASE_STYLE_CHANGER |
 | Kebab Case | `kebab`, `kebab_case`, `chain`, `chain_case` | case-style-changer |
+| Sentence Case | `sentence`, `sentence_case` | Case style changer |
+| Capital Case | `capital`, `capital_case`,`train`, `train_case` | Case Style Changer |
 
 ## Change Log
 

@@ -2,9 +2,11 @@ import pytest
 
 from case_style_changer.case_changer import CaseChanger
 from case_style_changer.case_style import CamelCase
+from case_style_changer.case_style import CapitalCase
 from case_style_changer.case_style import ConstantCase
 from case_style_changer.case_style import KebabCase
 from case_style_changer.case_style import PascalCase
+from case_style_changer.case_style import SentenceCase
 from case_style_changer.case_style import SnakeCase
 
 
@@ -13,7 +15,9 @@ from case_style_changer.case_style import SnakeCase
                           (PascalCase, 'CaseStyleChanger'),
                           (SnakeCase, 'case_style_changer'),
                           (ConstantCase, 'CASE_STYLE_CHANGER'),
-                          (KebabCase, 'case-style-changer')])
+                          (KebabCase, 'case-style-changer'),
+                          (SentenceCase, 'Case style changer'),
+                          (CapitalCase, 'Case Style Changer')])
 def test_case_changer(case, expected):
     words = ['case', 'style', 'changer']
 

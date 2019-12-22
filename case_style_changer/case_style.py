@@ -1,7 +1,10 @@
 class Case(object):
     @staticmethod
     def from_string(case_name):
-        cases = [CamelCase, PascalCase, SnakeCase, ConstantCase, KebabCase]
+        cases = [
+            CamelCase, PascalCase, SnakeCase, ConstantCase, KebabCase,
+            SentenceCase, CapitalCase
+        ]
 
         to_case = {}
         for case in cases:
@@ -15,7 +18,8 @@ class Case(object):
     @staticmethod
     def available_list():
         return CamelCase.flags() + PascalCase.flags() + SnakeCase.flags(
-        ) + ConstantCase.flags() + KebabCase.flags()
+        ) + ConstantCase.flags() + KebabCase.flags() + SentenceCase.flags(
+        ) + CapitalCase.flags()
 
 
 class SpaceSeparated(object):
@@ -31,15 +35,6 @@ class HyphenSeparated(object):
 
 
 class UppercaseSeparated(object):
-    pass
-
-
-class CapitalCase(SpaceSeparated):
-    """capital case
-
-    Example:
-        Case style changer
-    """
     pass
 
 
@@ -99,3 +94,25 @@ class KebabCase(HyphenSeparated):
     @staticmethod
     def flags():
         return ['kebab', 'kebab_case', 'chain', 'chain_case']
+
+
+class SentenceCase(SpaceSeparated):
+    """sentence case
+
+    Example:
+        Case style changer
+    """
+    @staticmethod
+    def flags():
+        return ['sentence', 'sentence_case']
+
+
+class CapitalCase(SpaceSeparated):
+    """capital case
+
+    Example:
+        Case Style Changer
+    """
+    @staticmethod
+    def flags():
+        return ['capital', 'capital_case', 'train', 'train_case']

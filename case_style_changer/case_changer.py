@@ -1,7 +1,9 @@
 from .case_style import CamelCase
+from .case_style import CapitalCase
 from .case_style import ConstantCase
 from .case_style import KebabCase
 from .case_style import PascalCase
+from .case_style import SentenceCase
 from .case_style import SnakeCase
 
 
@@ -12,7 +14,9 @@ class CaseChanger(object):
             PascalCase: self.pascal_case,
             SnakeCase: self.snake_case,
             ConstantCase: self.constant_case,
-            KebabCase: self.kebab_case
+            KebabCase: self.kebab_case,
+            SentenceCase: self.sentence_case,
+            CapitalCase: self.capital_case
         }
         try:
             self.change = to_change[case]
@@ -43,3 +47,11 @@ class CaseChanger(object):
         """convert to kebab case"""
         words = [word.lower() for word in words]
         return '-'.join(words)
+
+    def sentence_case(self, words):
+        """convert to sentence case"""
+        return ' '.join(words).capitalize()
+
+    def capital_case(self, words):
+        """convert to capital case"""
+        return ' '.join(words).title()
