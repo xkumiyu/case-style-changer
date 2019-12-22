@@ -14,8 +14,10 @@ def main():
 
 def parse_args(args):
     parser = argparse.ArgumentParser(description='Change case style.')
-    parser.add_argument('case_name', choices=Case.available_list())
-    parser.add_argument('--text')
+    parser.add_argument('case_name',
+                        choices=Case.available_list(),
+                        help='the name of the case to convert')
+    parser.add_argument('-t', '--text', help='the string to convert')
     return parser.parse_args(args)
 
 
