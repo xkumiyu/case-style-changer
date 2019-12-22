@@ -38,6 +38,10 @@ class UppercaseSeparated(object):
     pass
 
 
+class NoSeparated(object):
+    pass
+
+
 class CamelCase(UppercaseSeparated):
     """camel case
 
