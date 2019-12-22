@@ -1,8 +1,9 @@
 import pytest
 
-from case_style_changer.case_style import (HyphenSeparated, SpaceSeparated,
-                                           UnderscoreSeparated,
-                                           UppercaseSeparated)
+from case_style_changer.case_style import HyphenSeparated
+from case_style_changer.case_style import SpaceSeparated
+from case_style_changer.case_style import UnderscoreSeparated
+from case_style_changer.case_style import UppercaseSeparated
 from case_style_changer.text_splitter import TextSplitter
 
 

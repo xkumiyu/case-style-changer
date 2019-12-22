@@ -1,5 +1,8 @@
-from .case_style import (CamelCase, ConstantCase, KebabCase, PascalCase,
-                         SnakeCase)
+from .case_style import CamelCase
+from .case_style import ConstantCase
+from .case_style import KebabCase
+from .case_style import PascalCase
+from .case_style import SnakeCase
 
 
 class CaseChanger(object):
@@ -17,31 +20,26 @@ class CaseChanger(object):
             raise Exception('invalid case')
 
     def camel_case(self, words):
-        """ convert text to camel case
-        """
+        """convert to camel case"""
         words = [words[0].lower()] + [word.capitalize() for word in words[1:]]
         return ''.join(words)
 
     def pascal_case(self, words):
-        """ convert text to pascal case
-        """
+        """convert to pascal case"""
         words = [word.capitalize() for word in words]
         return ''.join(words)
 
     def snake_case(self, words):
-        """ convert text to snake case
-        """
+        """convert to snake case"""
         words = [word.lower() for word in words]
         return '_'.join(words)
 
     def constant_case(self, words):
-        """ convert text to constant case
-        """
+        """convert to constant case"""
         words = [word.upper() for word in words]
         return '_'.join(words)
 
     def kebab_case(self, words):
-        """ convert text to kebab case
-        """
+        """convert to kebab case"""
         words = [word.lower() for word in words]
         return '-'.join(words)

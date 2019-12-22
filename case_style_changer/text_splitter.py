@@ -1,7 +1,9 @@
 import re
 
-from .case_style import (HyphenSeparated, SpaceSeparated, UnderscoreSeparated,
-                         UppercaseSeparated)
+from .case_style import HyphenSeparated
+from .case_style import SpaceSeparated
+from .case_style import UnderscoreSeparated
+from .case_style import UppercaseSeparated
 
 
 class TextSplitter(object):

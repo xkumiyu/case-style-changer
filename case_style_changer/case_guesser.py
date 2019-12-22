@@ -1,12 +1,14 @@
 import re
 
-from .case_style import (HyphenSeparated, SpaceSeparated, UnderscoreSeparated,
-                         UppercaseSeparated)
+from .case_style import HyphenSeparated
+from .case_style import SpaceSeparated
+from .case_style import UnderscoreSeparated
+from .case_style import UppercaseSeparated
 
 
 class CaseGuesser(object):
     def guess(self, text):
-        # TODO: for multiple matches
+        # TODO(xkumiyu): for multiple matches
         if self.is_space_separated(text):
             return SpaceSeparated
         elif self.is_underscore_separated(text):

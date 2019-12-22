@@ -35,7 +35,8 @@ class UppercaseSeparated(object):
 
 
 class CapitalCase(SpaceSeparated):
-    """ capital case
+    """capital case
+
     Example:
         Case style changer
     """
@@ -43,7 +44,8 @@ class CapitalCase(SpaceSeparated):
 
 
 class CamelCase(UppercaseSeparated):
-    """ camel case
+    """camel case
+
     Example:
         caseStyleChanger
     """
@@ -53,7 +55,8 @@ class CamelCase(UppercaseSeparated):
 
 
 class PascalCase(UppercaseSeparated):
-    """ pascal case
+    """pascal case
+
     Example:
         CaseStyleChanger
     """
@@ -63,7 +66,8 @@ class PascalCase(UppercaseSeparated):
 
 
 class SnakeCase(UnderscoreSeparated):
-    """ snake case
+    """snake case
+
     Example:
         case_style_changer
     """
@@ -73,7 +77,8 @@ class SnakeCase(UnderscoreSeparated):
 
 
 class ConstantCase(UnderscoreSeparated):
-    """ constant case
+    """constant case
+
     Example:
         CASE_STYLE_CHANGER
     """
@@ -86,7 +91,8 @@ class ConstantCase(UnderscoreSeparated):
 
 
 class KebabCase(HyphenSeparated):
-    """ kebab case
+    """kebab case
+
     Example:
         case-style-changer
     """

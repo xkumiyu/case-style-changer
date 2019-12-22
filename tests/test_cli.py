@@ -1,6 +1,7 @@
 import pytest
 
-from case_style_changer.cli import parse_args, change_case_style
+from case_style_changer.cli import change_case_style
+from case_style_changer.cli import parse_args
 
 
 @pytest.mark.parametrize('args, expected',
