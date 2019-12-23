@@ -2,6 +2,8 @@
 
 ## 0.1.2
 
+Released 2019-12-23
+
 - Added available case style
 - Added support for single word input
 - Added support for multi-line input
