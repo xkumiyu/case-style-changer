@@ -1,7 +1,10 @@
 import re
 
-from .case_style import (HyphenSeparated, SpaceSeparated, UnderscoreSeparated,
-                         UppercaseSeparated)
+from .case_style import HyphenSeparated
+from .case_style import NoSeparated
+from .case_style import SpaceSeparated
+from .case_style import UnderscoreSeparated
+from .case_style import UppercaseSeparated
 
 
 class TextSplitter(object):
@@ -14,6 +17,8 @@ class TextSplitter(object):
             self.split = self.hyphen_separated
         elif case == UppercaseSeparated:
             self.split = self.uppercase_separated
+        elif case == NoSeparated:
+            self.split = self.no_separated
         else:
             raise Exception('invalid case')
 
@@ -37,3 +42,6 @@ class TextSplitter(object):
                 words.append(word.lower())
 
         return words
+
+    def no_separated(self, text):
+        return [text]

@@ -6,6 +6,8 @@ Case Style Changer is a CLI tool that guesses the case of the input string and c
 
 ## Installation
 
+Install and update using [pip](https://pip.pypa.io/en/stable/quickstart/):
+
 ``` sh
 pip install case-style-changer
 ```
@@ -41,3 +43,13 @@ case_style_changer
 | Snake Case | `snake`, `snake_case`, `lower_snake_case`, `lsc` | case_style_changer |
 | Constant Case | `constant`, `constant_case`, `screaming`, `screaming_snake_case`, `upper_snake_case`, `upper_case`, `usc`, `ssc` | CASE_STYLE_CHANGER |
 | Kebab Case | `kebab`, `kebab_case`, `chain`, `chain_case` | case-style-changer |
+| Sentence Case | `sentence`, `sentence_case` | Case style changer |
+| Capital Case | `capital`, `capital_case`,`train`, `train_case` | Case Style Changer |
+
+## Change Log
+
+See [Change Log](CHANGELOG.md).
+
+## Licence
+
+MIT: [LICENCE](LICENSE)

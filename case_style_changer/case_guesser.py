@@ -1,12 +1,15 @@
 import re
 
-from .case_style import (HyphenSeparated, SpaceSeparated, UnderscoreSeparated,
-                         UppercaseSeparated)
+from .case_style import HyphenSeparated
+from .case_style import NoSeparated
+from .case_style import SpaceSeparated
+from .case_style import UnderscoreSeparated
+from .case_style import UppercaseSeparated
 
 
 class CaseGuesser(object):
     def guess(self, text):
-        # TODO: for multiple matches
+        # TODO(xkumiyu): for multiple matches
         if self.is_space_separated(text):
             return SpaceSeparated
         elif self.is_underscore_separated(text):
@@ -16,7 +19,7 @@ class CaseGuesser(object):
         elif self.is_uppercase_separated(text):
             return UppercaseSeparated
         else:
-            raise Exception('invalid case')
+            return NoSeparated
 
     def is_space_separated(self, text):
         return ' ' in text
@@ -28,5 +31,5 @@ class CaseGuesser(object):
         return '-' in text
 
     def is_uppercase_separated(self, text):
-        result = re.search('[A-Z]', text)
+        result = re.search('.[A-Z]', text)
         return bool(result)

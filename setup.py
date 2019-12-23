@@ -1,4 +1,5 @@
-from setuptools import find_packages, setup
+from setuptools import find_packages
+from setuptools import setup
 
 import case_style_changer
 
@@ -21,7 +22,6 @@ setup(
     packages=find_packages(exclude=('tests', 'docs')),
     setup_requires=['wheel'],
     classifiers=[
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',

@@ -1,7 +1,10 @@
 class Case(object):
     @staticmethod
     def from_string(case_name):
-        cases = [CamelCase, PascalCase, SnakeCase, ConstantCase, KebabCase]
+        cases = [
+            CamelCase, PascalCase, SnakeCase, ConstantCase, KebabCase,
+            SentenceCase, CapitalCase
+        ]
 
         to_case = {}
         for case in cases:
@@ -15,7 +18,8 @@ class Case(object):
     @staticmethod
     def available_list():
         return CamelCase.flags() + PascalCase.flags() + SnakeCase.flags(
-        ) + ConstantCase.flags() + KebabCase.flags()
+        ) + ConstantCase.flags() + KebabCase.flags() + SentenceCase.flags(
+        ) + CapitalCase.flags()
 
 
 class SpaceSeparated(object):
@@ -34,16 +38,13 @@ class UppercaseSeparated(object):
     pass
 
 
-class CapitalCase(SpaceSeparated):
-    """ capital case
-    Example:
-        Case style changer
-    """
+class NoSeparated(object):
     pass
 
 
 class CamelCase(UppercaseSeparated):
-    """ camel case
+    """camel case
+
     Example:
         caseStyleChanger
     """
@@ -53,7 +54,8 @@ class CamelCase(UppercaseSeparated):
 
 
 class PascalCase(UppercaseSeparated):
-    """ pascal case
+    """pascal case
+
     Example:
         CaseStyleChanger
     """
@@ -63,7 +65,8 @@ class PascalCase(UppercaseSeparated):
 
 
 class SnakeCase(UnderscoreSeparated):
-    """ snake case
+    """snake case
+
     Example:
         case_style_changer
     """
@@ -73,7 +76,8 @@ class SnakeCase(UnderscoreSeparated):
 
 
 class ConstantCase(UnderscoreSeparated):
-    """ constant case
+    """constant case
+
     Example:
         CASE_STYLE_CHANGER
     """
@@ -86,10 +90,33 @@ class ConstantCase(UnderscoreSeparated):
 
 
 class KebabCase(HyphenSeparated):
-    """ kebab case
+    """kebab case
+
     Example:
         case-style-changer
     """
     @staticmethod
     def flags():
         return ['kebab', 'kebab_case', 'chain', 'chain_case']
+
+
+class SentenceCase(SpaceSeparated):
+    """sentence case
+
+    Example:
+        Case style changer
+    """
+    @staticmethod
+    def flags():
+        return ['sentence', 'sentence_case']
+
+
+class CapitalCase(SpaceSeparated):
+    """capital case
+
+    Example:
+        Case Style Changer
+    """
+    @staticmethod
+    def flags():
+        return ['capital', 'capital_case', 'train', 'train_case']

@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "e35b78d983dad1bf83a6e61613e7a7ad7a0943b317561310235498d6d43640da"
+            "sha256": "52e873cf4137627a59c3c435d7f08e6b06f4b2c92d5fa86ea5de82d5757557bd"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -127,6 +127,14 @@
             ],
             "index": "pypi",
             "version": "==3.7.9"
+        },
+        "hacking": {
+            "hashes": [
+                "sha256:2ce6197e7d45838c8fff467d99630ed2ebd6c1207cfe57beb55d35df5651d899",
+                "sha256:406cd4d758e21470d163367df59dc05ed47a7d7e87d07c4e652907821ce7549a"
+            ],
+            "index": "pypi",
+            "version": "==2.0.0"
         },
         "idna": {
             "hashes": [
@@ -295,10 +303,10 @@
         },
         "tqdm": {
             "hashes": [
-                "sha256:7543892c59720e36e4212180274d8f58dde36803bc1f6370fd09afa20b8f5892",
-                "sha256:f0ab01cf3ae5673d18f918700c0165e5fad0f26b5ebe4b34f62ead92686b5340"
+                "sha256:166a82cdea964ae45528e0cc89436255ff2be73dc848bdf239f13c501cae5dc7",
+                "sha256:9036904496bd2afacf836a6f206c5a766ce11d3e9319d54a4e794c0f34b111dc"
             ],
-            "version": "==4.40.2"
+            "version": "==4.41.0"
         },
         "twine": {
             "hashes": [
