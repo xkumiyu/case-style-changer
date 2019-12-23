@@ -26,18 +26,31 @@ def change_case_style(text, case_name):
     out_case = Case.from_string(case_name)
 
     guesser = CaseGuesser()
-    in_case = guesser.guess(in_text)
+    result = []
+    for in_string in in_text:
+        in_case = guesser.guess(in_string)
 
-    splitter = TextSplitter(in_case)
-    words = splitter.split(in_text)
+        splitter = TextSplitter(in_case)
+        words = splitter.split(in_string)
 
-    changer = CaseChanger(out_case)
-    out_text = changer.change(words)
+        changer = CaseChanger(out_case)
+        out_string = changer.change(words)
+
+        result.append(out_string)
+
+    if len(result) == 1:
+        out_text = result[0]
+    else:
+        out_text = '\n'.join(result)
 
     return out_text
 
 
-def get_text(text):
+def get_text(text) -> list:
     if text is None:
-        text = input().strip()
+        text = sys.stdin.readlines()
+        text = [line.rstrip() for line in text]
+    else:
+        text = text.encode('utf-8').decode('unicode-escape')
+        text = text.splitlines()
     return text

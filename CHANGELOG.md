@@ -4,6 +4,7 @@
 
 - Added available case style
 - Added support for single word input
+- Added support for multi-line input
 - Removed Python 2.7 support
 
 ## 0.1.1
