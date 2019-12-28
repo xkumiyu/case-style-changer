@@ -8,22 +8,22 @@ jobs:
   deploy:
 
     runs-on: ubuntu-latest
-    env:
-      PATH: $HOME/.poetry/bin:$PATH
 
     steps:
     - uses: actions/checkout@v1
+
     - name: Set up Python
       uses: actions/setup-python@v1
       with:
         python-version: '3.x'
+
     - name: Install poetry
-      run: |
-        curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+      run: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+
     - name: Build and publish
       env:
         PYPI_USERNAME: ${{ secrets.PYPI_USERNAME }}
         PYPI_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
       run: |
-        $HOME/.poetry/bin/poetry build
-        $HOME/.poetry/bin/poetry publish -u $PYPI_USERNAME -p $PYPI_PASSWORD
+        ~/.poetry/bin/poetry build
+        ~/.poetry/bin/poetry publish -u $PYPI_USERNAME -p $PYPI_PASSWORD
