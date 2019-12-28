@@ -221,3 +221,6 @@ typings/
 
 # vscode
 .vscode
+
+# direnv
+.envrc

@@ -1,6 +1,8 @@
 import argparse
 import sys
 
+import pkg_resources
+
 from .case_changer import CaseChanger
 from .case_guesser import CaseGuesser
 from .case_style import Case
@@ -18,6 +20,10 @@ def parse_args(args):
                         choices=Case.available_list(),
                         help='the name of the case to convert')
     parser.add_argument('-t', '--text', help='the string to convert')
+    parser.add_argument('--version',
+                        action='version',
+                        version=f'Case Style Changer {get_version()}',
+                        help='show the version and exit')
     return parser.parse_args(args)
 
 
@@ -54,3 +60,7 @@ def get_text(text) -> list:
         text = text.encode('utf-8').decode('unicode-escape')
         text = text.splitlines()
     return text
+
+
+def get_version():
+    return pkg_resources.get_distribution('case_style_changer').version

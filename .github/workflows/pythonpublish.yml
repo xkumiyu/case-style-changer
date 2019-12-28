@@ -6,21 +6,24 @@ on:
 
 jobs:
   deploy:
+
     runs-on: ubuntu-latest
+    env:
+      PATH: $HOME/.poetry/bin:$PATH
+
     steps:
     - uses: actions/checkout@v1
     - name: Set up Python
       uses: actions/setup-python@v1
       with:
         python-version: '3.x'
-    - name: Install dependencies
+    - name: Install poetry
       run: |
-        python -m pip install --upgrade pip
-        pip install setuptools wheel twine
+        curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
     - name: Build and publish
       env:
-        TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
-        TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+        PYPI_USERNAME: ${{ secrets.PYPI_USERNAME }}
+        PYPI_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
       run: |
-        python setup.py sdist bdist_wheel
-        twine upload dist/*
+        $HOME/.poetry/bin/poetry build
+        $HOME/.poetry/bin/poetry publish -u $PYPI_USERNAME -p $PYPI_PASSWORD
