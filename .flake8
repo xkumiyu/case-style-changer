@@ -1,5 +1,6 @@
 [flake8]
 exclude =
-    .venv/*,
+    .tox,
+    .venv,
     dist,
     *egg
