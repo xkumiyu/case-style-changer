@@ -15,15 +15,19 @@ def main():
 
 
 def parse_args(args):
-    parser = argparse.ArgumentParser(description='Change case style.')
-    parser.add_argument('case_name',
-                        choices=Case.available_list(),
-                        help='the name of the case to convert')
-    parser.add_argument('-t', '--text', help='the string to convert')
-    parser.add_argument('--version',
-                        action='version',
-                        version=f'Case Style Changer {get_version()}',
-                        help='show the version and exit')
+    parser = argparse.ArgumentParser(description="Change case style.")
+    parser.add_argument(
+        "case_name",
+        choices=Case.available_list(),
+        help="the name of the case to convert",
+    )
+    parser.add_argument("-t", "--text", help="the string to convert")
+    parser.add_argument(
+        "--version",
+        action="version",
+        version=f"Case Style Changer {get_version()}",
+        help="show the version and exit",
+    )
     return parser.parse_args(args)
 
 
@@ -47,7 +51,7 @@ def change_case_style(text, case_name):
     if len(result) == 1:
         out_text = result[0]
     else:
-        out_text = '\n'.join(result)
+        out_text = "\n".join(result)
 
     return out_text
 
@@ -57,10 +61,10 @@ def get_text(text) -> list:
         text = sys.stdin.readlines()
         text = [line.rstrip() for line in text]
     else:
-        text = text.encode('utf-8').decode('unicode-escape')
+        text = text.encode("utf-8").decode("unicode-escape")
         text = text.splitlines()
     return text
 
 
 def get_version():
-    return pkg_resources.get_distribution('case_style_changer').version
+    return pkg_resources.get_distribution("case_style_changer").version

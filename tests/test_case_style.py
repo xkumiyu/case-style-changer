@@ -10,13 +10,18 @@ from case_style_changer.case_style import SentenceCase
 from case_style_changer.case_style import SnakeCase
 
 
-@pytest.mark.parametrize('string, expected', [('camel', CamelCase),
-                                              ('pascal', PascalCase),
-                                              ('snake', SnakeCase),
-                                              ('constant', ConstantCase),
-                                              ('kebab', KebabCase),
-                                              ('sentence', SentenceCase),
-                                              ('capital', CapitalCase)])
+@pytest.mark.parametrize(
+    "string, expected",
+    [
+        ("camel", CamelCase),
+        ("pascal", PascalCase),
+        ("snake", SnakeCase),
+        ("constant", ConstantCase),
+        ("kebab", KebabCase),
+        ("sentence", SentenceCase),
+        ("capital", CapitalCase),
+    ],
+)
 def test_from_string(string, expected):
     case = Case.from_string(string)
 
@@ -25,7 +30,7 @@ def test_from_string(string, expected):
 
 def test_from_string_gives_error():
     with pytest.raises(Exception):
-        Case.from_string('')
+        Case.from_string("")
 
 
 def test_no_duplicates_in_the_available_list():

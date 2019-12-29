@@ -12,6 +12,13 @@ Install and update using [pip](https://pip.pypa.io/en/stable/quickstart/):
 pip install case-style-changer
 ```
 
+For macOS user, you can install and update using [brew](https://brew.sh/):
+
+``` sh
+brew tap xkumiyu/homebrew-case-style-changer
+brew install case-style-changer
+```
+
 ## Usage
 
 ``` sh
@@ -36,15 +43,17 @@ case_style_changer
 
 ### Available case style
 
-| Case Name | `CASE_NAME` | Example |
+The available case styles are:
+
+| Case Name | Case Name Alias | Example |
 |:--|:--|:--|
-| Camel Case | `camel`, `camel_case`, `lower_camel_case`, `lcc` | caseStyleChanger |
-| Pascal Case | `pascal`, `pascal_case`, `upper_camel_case`, `ucc` | CaseStyleChanger |
-| Snake Case | `snake`, `snake_case`, `lower_snake_case`, `lsc` | case_style_changer |
-| Constant Case | `constant`, `constant_case`, `screaming`, `screaming_snake_case`, `upper_snake_case`, `upper_case`, `usc`, `ssc` | CASE_STYLE_CHANGER |
-| Kebab Case | `kebab`, `kebab_case`, `chain`, `chain_case` | case-style-changer |
-| Sentence Case | `sentence`, `sentence_case` | Case style changer |
-| Capital Case | `capital`, `capital_case`,`train`, `train_case` | Case Style Changer |
+| `camel_case` | `camel`, `lower_camel_case`, `lcc` | caseStyleChanger |
+| `pascal_case` | `pascal`, `pascal_case`, `upper_camel_case`, `ucc` | CaseStyleChanger |
+| `snake_case` | `snake`, `lower_snake_case`, `lsc` | case_style_changer |
+| `constant_case` | `constant`, `constant_case`, `screaming`, `screaming_snake_case`, `upper_snake_case`, `upper_case`, `usc`, `ssc` | CASE_STYLE_CHANGER |
+| `kebab_case` | `kebab`, `kebab_case`, `chain`, `chain_case` | case-style-changer |
+| `sentence_case` | `sentence` | Case style changer |
+| `capital_case` | `capital`,`train`, `train_case` | Case Style Changer |
 
 ## Change Log
 

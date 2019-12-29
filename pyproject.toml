@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "case-style-changer"
 version = "0.1.2"
-description = "Case Style Changer - a CLI."
+description = "Case Style Changer - a CLI tool that guesses the case of the input string and converts it to another case."
 authors = ["xkumiyu <xkumiyu@gmail.com>"]
 license = "MIT"
 readme = "README.md"
@@ -24,6 +24,7 @@ classifiers = [
 python = ">=3.6"
 
 [tool.poetry.dev-dependencies]
+black = "^19.10b0"
 flake8 = "^3.7.9"
 hacking = "^2.0.0"
 pre-commit = "^1.20.0"
@@ -31,7 +32,6 @@ pytest = "^5.3.2"
 pytest-watch = "^4.2.0"
 pytest-cov = "^2.8.1"
 tox = "^3.14.3"
-yapf = "^0.29.0"
 
 [tool.poetry.scripts]
 csc = "case_style_changer.cli:main"

@@ -20,25 +20,25 @@ class TextSplitter(object):
         elif case == NoSeparated:
             self.split = self.no_separated
         else:
-            raise Exception('invalid case')
+            raise Exception("invalid case")
 
     def space_separated(self, text):
-        return text.split(' ')
+        return text.split(" ")
 
     def underscore_separated(self, text):
-        return text.split('_')
+        return text.split("_")
 
     def hyphen_separated(self, text):
-        return text.split('-')
+        return text.split("-")
 
     def uppercase_separated(self, text):
-        first_words = [''] + re.findall('[A-Z]', text)
-        remaining_words = re.split('[A-Z]', text)
+        first_words = [""] + re.findall("[A-Z]", text)
+        remaining_words = re.split("[A-Z]", text)
 
         words = []
         for first_word, remaining_word in zip(first_words, remaining_words):
             word = first_word + remaining_word
-            if word != '':
+            if word != "":
                 words.append(word.lower())
 
         return words
