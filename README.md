@@ -1,6 +1,6 @@
 # Case Style Changer
 
-[![PyPi](https://img.shields.io/pypi/v/case-style-changer)](https://pypi.org/project/case-style-changer) [![Python Version](https://img.shields.io/pypi/pyversions/case-style-changer)](https://pypi.org/project/case-style-changer) [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/xkumiyu/case-style-changer/Python%20package)](https://github.com/xkumiyu/case-style-changer/actions) [![codecov](https://img.shields.io/codecov/c/github/xkumiyu/case-style-changer)](https://codecov.io/gh/xkumiyu/case-style-changer) [![Code Climate](https://img.shields.io/codeclimate/maintainability/xkumiyu/case-style-changer)](https://codeclimate.com/github/xkumiyu/case-style-changer) [![License](https://img.shields.io/github/license/xkumiyu/case-style-changer)](LICENSE)
+[![PyPi][pypi-version]][pypi] [![Python Version][python-version]][pypi] [![GitHub Workflow Status][actions-status]][actions] [![codecov][codecov-status]][codecov] [![Code Climate][codeclimate-status]][codeclimate] [![License][license]][license-file]
 
 Case Style Changer is a CLI tool that guesses the case of the input string and converts it to another case.
 
@@ -62,3 +62,15 @@ See [Change Log](CHANGELOG.md).
 ## Licence
 
 MIT: [LICENCE](LICENSE)
+
+[pypi]: https://pypi.org/project/case-style-changer
+[pypi-version]: https://img.shields.io/pypi/v/case-style-changer
+[python-version]: https://img.shields.io/pypi/pyversions/case-style-changer
+[actions]: https://github.com/xkumiyu/case-style-changer/actions
+[actions-status]: https://img.shields.io/github/workflow/status/xkumiyu/case-style-changer/Python%20package
+[codecov]: https://codecov.io/gh/xkumiyu/case-style-changer
+[codecov-status]: https://img.shields.io/codecov/c/github/xkumiyu/case-style-changer
+[codeclimate]: https://img.shields.io/codeclimate/maintainability/xkumiyu/case-style-changer
+[codeclimate-status]: https://img.shields.io/codeclimate/maintainability/xkumiyu/case-style-changer
+[license]: https://img.shields.io/github/license/xkumiyu/case-style-changer
+[license-file]: https://github.com/xkumiyu/case-style-changer/blob/master/LICENSE
