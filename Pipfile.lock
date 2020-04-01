@@ -29,7 +29,6 @@
                 "sha256:cc8da25076a1fe56c3ac63671e2194458e0c4d9c7becfd52ca251650d517903c",
                 "sha256:e78e426105ac07026ba098f04de8abe9b6e3e98b5befbf89b51a5ef0a4292b03"
             ],
-            "index": "pypi",
             "version": "==3.1.4"
         },
         "case-style-changer": {
@@ -311,11 +310,11 @@
         },
         "pytest-mock": {
             "hashes": [
-                "sha256:b35eb281e93aafed138db25c8772b95d3756108b601947f89af503f8c629413f",
-                "sha256:cb67402d87d5f53c579263d37971a164743dc33c159dfb4fb4a86f37c5552307"
+                "sha256:98e02534f170e4f37d7e1abdfc5973fd4207aa609582291717f643764e71c925",
+                "sha256:a4494016753a30231f8519bfd160242a0f3c8fb82ca36e7b6f82a7fb602ac6b8"
             ],
             "index": "pypi",
-            "version": "==2.0.0"
+            "version": "==3.0.0"
         },
         "pytest-watch": {
             "hashes": [
