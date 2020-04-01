@@ -29,7 +29,6 @@
                 "sha256:cc8da25076a1fe56c3ac63671e2194458e0c4d9c7becfd52ca251650d517903c",
                 "sha256:e78e426105ac07026ba098f04de8abe9b6e3e98b5befbf89b51a5ef0a4292b03"
             ],
-            "index": "pypi",
             "version": "==3.1.4"
         },
         "case-style-changer": {
@@ -182,11 +181,11 @@
         },
         "hacking": {
             "hashes": [
-                "sha256:2ce6197e7d45838c8fff467d99630ed2ebd6c1207cfe57beb55d35df5651d899",
-                "sha256:406cd4d758e21470d163367df59dc05ed47a7d7e87d07c4e652907821ce7549a"
+                "sha256:361c04980d535d5e8a3ec7826c1553a87026cb18113822c76a2adf21f65b1faa",
+                "sha256:febff65bac1b5f4bff95cf3299e885bee94fde9a48edfec0e4f0c36f9c9805fa"
             ],
             "index": "pypi",
-            "version": "==2.0.0"
+            "version": "==3.0.0"
         },
         "idna": {
             "hashes": [
