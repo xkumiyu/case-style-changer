@@ -2,7 +2,7 @@
 
 ## 0.1.3
 
-Unreleased
+Released 2021-01-02
 
 - Added Python 3.9 support
 - Removed Python 3.5 support

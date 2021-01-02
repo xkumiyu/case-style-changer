@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "case-style-changer"
-version = "0.1.2"
+version = "0.1.3"
 description = "Case Style Changer - a CLI tool that guesses the case of the input string and converts it to another case."
 authors = ["xkumiyu <xkumiyu@gmail.com>"]
 license = "MIT"
