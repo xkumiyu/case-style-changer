@@ -8,14 +8,19 @@ from case_style_changer.case_style import UnderscoreSeparated
 from case_style_changer.case_style import UppercaseSeparated
 
 
-@pytest.mark.parametrize('text, expected',
-                         [('', NoSeparated), ('case', NoSeparated),
-                          ('Case', NoSeparated),
-                          ('case style changer', SpaceSeparated),
-                          ('case_style_changer', UnderscoreSeparated),
-                          ('case-style-changer', HyphenSeparated),
-                          ('caseStyleChanger', UppercaseSeparated),
-                          ('CaseStyleChanger', UppercaseSeparated)])
+@pytest.mark.parametrize(
+    "text, expected",
+    [
+        ("", NoSeparated),
+        ("case", NoSeparated),
+        ("Case", NoSeparated),
+        ("case style changer", SpaceSeparated),
+        ("case_style_changer", UnderscoreSeparated),
+        ("case-style-changer", HyphenSeparated),
+        ("caseStyleChanger", UppercaseSeparated),
+        ("CaseStyleChanger", UppercaseSeparated),
+    ],
+)
 def test_guess(text, expected):
     guesser = CaseGuesser()
     case = guesser.guess(text)

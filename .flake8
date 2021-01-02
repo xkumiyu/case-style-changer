@@ -1,0 +1,6 @@
+[flake8]
+exclude =
+    .tox,
+    .venv,
+    dist,
+    *egg

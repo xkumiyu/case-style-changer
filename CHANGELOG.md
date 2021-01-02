@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.1.3
+
+Released 2021-01-02
+
+- Added Python 3.9 support
+- Removed Python 3.5 support
+
 ## 0.1.2
 
 Released 2019-12-23

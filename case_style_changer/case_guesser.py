@@ -22,14 +22,14 @@ class CaseGuesser(object):
             return NoSeparated
 
     def is_space_separated(self, text):
-        return ' ' in text
+        return " " in text
 
     def is_underscore_separated(self, text):
-        return '_' in text
+        return "_" in text
 
     def is_hyphen_separated(self, text):
-        return '-' in text
+        return "-" in text
 
     def is_uppercase_separated(self, text):
-        result = re.search('.[A-Z]', text)
+        result = re.search(".[A-Z]", text)
         return bool(result)

@@ -2,8 +2,13 @@ class Case(object):
     @staticmethod
     def from_string(case_name):
         cases = [
-            CamelCase, PascalCase, SnakeCase, ConstantCase, KebabCase,
-            SentenceCase, CapitalCase
+            CamelCase,
+            PascalCase,
+            SnakeCase,
+            ConstantCase,
+            KebabCase,
+            SentenceCase,
+            CapitalCase,
         ]
 
         to_case = {}
@@ -13,13 +18,19 @@ class Case(object):
         try:
             return to_case[case_name]
         except KeyError:
-            raise Exception('invalid case name')
+            raise Exception("invalid case name")
 
     @staticmethod
     def available_list():
-        return CamelCase.flags() + PascalCase.flags() + SnakeCase.flags(
-        ) + ConstantCase.flags() + KebabCase.flags() + SentenceCase.flags(
-        ) + CapitalCase.flags()
+        return (
+            CamelCase.flags()
+            + PascalCase.flags()
+            + SnakeCase.flags()
+            + ConstantCase.flags()
+            + KebabCase.flags()
+            + SentenceCase.flags()
+            + CapitalCase.flags()
+        )
 
 
 class SpaceSeparated(object):
@@ -48,9 +59,10 @@ class CamelCase(UppercaseSeparated):
     Example:
         caseStyleChanger
     """
+
     @staticmethod
     def flags():
-        return ['camel', 'camel_case', 'lower_camel_case', 'lcc']
+        return ["camel", "camel_case", "lower_camel_case", "lcc"]
 
 
 class PascalCase(UppercaseSeparated):
@@ -59,9 +71,10 @@ class PascalCase(UppercaseSeparated):
     Example:
         CaseStyleChanger
     """
+
     @staticmethod
     def flags():
-        return ['pascal', 'pascal_case', 'upper_camel_case', 'ucc']
+        return ["pascal", "pascal_case", "upper_camel_case", "ucc"]
 
 
 class SnakeCase(UnderscoreSeparated):
@@ -70,9 +83,10 @@ class SnakeCase(UnderscoreSeparated):
     Example:
         case_style_changer
     """
+
     @staticmethod
     def flags():
-        return ['snake', 'snake_case', 'lower_snake_case', 'lsc']
+        return ["snake", "snake_case", "lower_snake_case", "lsc"]
 
 
 class ConstantCase(UnderscoreSeparated):
@@ -81,11 +95,18 @@ class ConstantCase(UnderscoreSeparated):
     Example:
         CASE_STYLE_CHANGER
     """
+
     @staticmethod
     def flags():
         return [
-            'constant', 'constant_case', 'screaming', 'screaming_snake_case',
-            'upper_snake_case', 'upper_case', 'usc', 'ssc'
+            "constant",
+            "constant_case",
+            "screaming",
+            "screaming_snake_case",
+            "upper_snake_case",
+            "upper_case",
+            "usc",
+            "ssc",
         ]
 
 
@@ -95,9 +116,10 @@ class KebabCase(HyphenSeparated):
     Example:
         case-style-changer
     """
+
     @staticmethod
     def flags():
-        return ['kebab', 'kebab_case', 'chain', 'chain_case']
+        return ["kebab", "kebab_case", "chain", "chain_case"]
 
 
 class SentenceCase(SpaceSeparated):
@@ -106,9 +128,10 @@ class SentenceCase(SpaceSeparated):
     Example:
         Case style changer
     """
+
     @staticmethod
     def flags():
-        return ['sentence', 'sentence_case']
+        return ["sentence", "sentence_case"]
 
 
 class CapitalCase(SpaceSeparated):
@@ -117,6 +140,7 @@ class CapitalCase(SpaceSeparated):
     Example:
         Case Style Changer
     """
+
     @staticmethod
     def flags():
-        return ['capital', 'capital_case', 'train', 'train_case']
+        return ["capital", "capital_case", "train", "train_case"]
