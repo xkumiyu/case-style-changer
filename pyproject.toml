@@ -32,7 +32,7 @@ pre-commit = "^1.20.0"
 pytest = "^5.3.2"
 pytest-watch = "^4.2.0"
 pytest-cov = "^2.8.1"
-tox = "^3.14.3"
+tox = "^3.23.0"
 
 [tool.poetry.scripts]
 csc = "case_style_changer.cli:main"
